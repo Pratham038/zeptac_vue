@@ -9,6 +9,7 @@ export interface User {
   email: string;
   password: string;
   api_token: string;
+  data: string;
 }
 
 export const useAuthStore = defineStore("auth", () => {
@@ -17,10 +18,12 @@ export const useAuthStore = defineStore("auth", () => {
   const isAuthenticated = ref(!!JwtService.getToken());
 
   function setAuth(authUser: User) {
+    console.log(authUser);
     isAuthenticated.value = true;
     user.value = authUser;
+    user.value.data = JSON.stringify(authUser);
     errors.value = {};
-    JwtService.saveToken(user.value.api_token);
+    JwtService.saveToken(user.value.api_token,user.value.data);
   }
 
   function setError(error: any) {
@@ -68,6 +71,7 @@ export const useAuthStore = defineStore("auth", () => {
       });
   }
 
+  // before every page a call is made with a JWT token to request user credentials
   function verifyAuth() {
     if (JwtService.getToken()) {
       ApiService.setHeader();
@@ -93,5 +97,6 @@ export const useAuthStore = defineStore("auth", () => {
     register,
     forgotPassword,
     verifyAuth,
+    purgeAuth,
   };
 });

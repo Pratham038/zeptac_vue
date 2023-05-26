@@ -7,7 +7,7 @@
       id="kt_login_signin_form"
       @submit="onSubmitLogin"
       :validation-schema="login"
-      :initial-values="{ email: 'admin@demo.com', password: 'demo' }"
+      :initial-values="{ email: 'admin@cleanroom.com', password: 'Admin@123' }"
     >
       <!--begin::Heading-->
       <div class="text-center mb-10">
@@ -180,8 +180,10 @@ export default defineComponent({
   setup() {
     const store = useAuthStore();
     const router = useRouter();
-
     const submitButton = ref<HTMLButtonElement | null>(null);
+
+    // clear the string dump if accedentlity on backed
+    store.purgeAuth();
 
     //Create form validation object
     const login = Yup.object().shape({

@@ -57,8 +57,8 @@
 </template>
 
 <script lang="ts">
-import {getAssetPath} from "@/core/helpers/assets";
-import {defineComponent} from "vue";
+import { getAssetPath } from "@/core/helpers/assets";
+import { defineComponent } from "vue";
 import Dropdown2 from "@/components/dropdown/Dropdown2.vue";
 
 export default defineComponent({

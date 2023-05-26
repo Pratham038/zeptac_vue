@@ -111,9 +111,9 @@
 </template>
 
 <script lang="ts">
-import {getAssetPath} from "@/core/helpers/assets";
-import {defineComponent, onMounted} from "vue";
-import {getCSSVariableValue} from "@/assets/ts/_utils";
+import { getAssetPath } from "@/core/helpers/assets";
+import { defineComponent, onMounted } from "vue";
+import { getCSSVariableValue } from "@/assets/ts/_utils";
 
 export default defineComponent({
   name: "default-dashboard-widget-2",

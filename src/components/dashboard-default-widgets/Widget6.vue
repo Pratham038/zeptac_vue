@@ -342,12 +342,12 @@
 </template>
 
 <script lang="ts">
-import {getAssetPath} from "@/core/helpers/assets";
-import {computed, defineComponent, onMounted, ref, watch} from "vue";
+import { getAssetPath } from "@/core/helpers/assets";
+import { computed, defineComponent, onMounted, ref, watch } from "vue";
 import type VueApexCharts from "vue3-apexcharts";
-import type {ApexOptions} from "apexcharts";
-import {useThemeStore} from "@/stores/theme";
-import {getCSSVariableValue} from "@/assets/ts/_utils";
+import type { ApexOptions } from "apexcharts";
+import { useThemeStore } from "@/stores/theme";
+import { getCSSVariableValue } from "@/assets/ts/_utils";
 
 export default defineComponent({
   name: "default-dashboard-widget-6",

@@ -69,8 +69,8 @@
 </template>
 
 <script lang="ts">
-import {getAssetPath} from "@/core/helpers/assets";
-import {defineComponent, ref} from "vue";
+import { getAssetPath } from "@/core/helpers/assets";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "logs-card",

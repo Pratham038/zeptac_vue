@@ -11,9 +11,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     redirect: "/dashboard",
     component: () => import("@/layouts/main-layout/MainLayout.vue"),
-    meta: {
-      middleware: "auth",
-    },
     children: [
       {
         path: "/dashboard",
@@ -22,6 +19,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           pageTitle: "Dashboard",
           breadcrumbs: ["Dashboards"],
+          middleware: "auth",
         },
       },
       {
@@ -492,7 +490,7 @@ router.beforeEach((to, from, next) => {
   configStore.resetLayoutConfig();
 
   // verify auth token before each page change
-  authStore.verifyAuth();
+  // authStore.verifyAuth();
 
   // before page access check if page requires authentication
   if (to.meta.middleware == "auth") {

@@ -91,8 +91,8 @@
 </template>
 
 <script lang="ts">
-import {getAssetPath} from "@/core/helpers/assets";
-import {defineComponent, ref} from "vue";
+import { getAssetPath } from "@/core/helpers/assets";
+import { defineComponent, ref } from "vue";
 import Datatable from "@/components/kt-datatable/KTDataTable.vue";
 
 export default defineComponent({

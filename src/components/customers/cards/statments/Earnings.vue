@@ -88,8 +88,8 @@
 </template>
 
 <script lang="ts">
-import {getAssetPath} from "@/core/helpers/assets";
-import {defineComponent} from "vue";
+import { getAssetPath } from "@/core/helpers/assets";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "earnings-card",
